@@ -10,3 +10,5 @@ Admin Panel for backend<br/>
 6.) Create a superuser who can make changes in the database by: python3 manage.py createsuperuser <br/>
 7.) Run the server by: python3 manage.py runserver <br/>
 8.) Go to http://localhost:8000/admin/ and login with the super user credentials to make changes in the tables <br/>
+9.) Go to http://localhost:8000/api/login/ to login with a normal user <br/>
+10.) Go to http://localhost:8000/api/register/ to signup <br/>
