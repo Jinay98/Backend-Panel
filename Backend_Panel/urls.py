@@ -14,8 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf.urls import url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from .views import login_redirect
+from api.views import home
 
 urlpatterns = [
+    url(r'^$', login_redirect, name='login_redirect'),
     path('admin/', admin.site.urls),
+    path('accounts/profile/', home),
+    path(r'api/', include(('api.urls', 'api'), namespace='api')),
 ]
+urlpatterns += staticfiles_urlpatterns()

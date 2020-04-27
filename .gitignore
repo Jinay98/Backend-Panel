@@ -32,3 +32,5 @@ dist/
 
 # Ignore PyCharm / IntelliJ files
 .idea/
+
+./Backend_Panel/static
